@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Durga 💗</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%,#ffd1e7 0%,transparent 30%),
+        radial-gradient(circle at 90% 90%,#d8c9ff 0%,transparent 30%),
+        linear-gradient(135deg,#fff0f7,#eee4ff,#e4f8ff);
+    color:#62365f;
+}
+
+/* INTRO */
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+        radial-gradient(circle at 20% 20%,#ffd0e7,transparent 35%),
+        radial-gradient(circle at 80% 80%,#dacbff,transparent 35%),
+        #fff3f8;
+    transition:1s ease;
+}
+
+.intro-box{
+    width:min(500px,90%);
+    padding:35px 25px;
+}
+
+.intro-heart{
+    font-size:85px;
+    animation:heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.2)}
+}
+
+.intro-box h1{
+    margin:18px 0 12px;
+    font-size:clamp(35px,8vw,58px);
+    color:#d84d93;
+}
+
+.intro-box p{
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:28px;
+}
+
+.open-btn,
+.surprise-btn{
+    border:none;
+    padding:16px 30px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ff5ba9,#9b63df);
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 10px 30px #b85b9438;
+    transition:.3s;
+}
+
+.open-btn:hover,
+.surprise-btn:hover{
+    transform:scale(1.07);
+}
+
+/* MAIN */
+.main{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 15px;
+}
+
+.card{
+    width:min(900px,95%);
+    padding:42px 25px;
+    text-align:center;
+    border-radius:35px;
+    background:#ffffff91;
+    backdrop-filter:blur(18px);
+    border:2px solid #ffffffb8;
+    box-shadow:0 25px 70px #8d4e9325;
+}
+
+.tag{
+    display:inline-block;
+    padding:9px 20px;
+    border-radius:50px;
+    background:#ffffffbd;
+    color:#d44c91;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.title{
+    font-size:clamp(42px,9vw,78px);
+    color:#d84d93;
+    line-height:1;
+}
+
+.name{
+    margin-top:8px;
+    font-size:clamp(65px,13vw,120px);
+    font-weight:900;
+    background:linear-gradient(
+        90deg,
+        #ff4d9b,
+        #a35ee2,
+        #ff4d9b
+    );
+    background-size:200%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:gradient 4s linear infinite;
+}
+
+@keyframes gradient{
+    to{
+        background-position:200%;
+    }
+}
+
+.cake{
+    font-size:90px;
+    margin:15px 0;
+    animation:cake 2s infinite;
+}
+
+@keyframes cake{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px) rotate(2deg);
+    }
+}
+
+.subtitle{
+    max-width:680px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.7;
+}
+
+.message{
+    max-width:720px;
+    margin:28px auto;
+    padding:27px;
+    border-radius:28px;
+    background:#ffffffa8;
+    font-size:17px;
+    line-height:1.85;
+    box-shadow:0 10px 30px #9e5b8d12;
+}
+
+.message b{
+    color:#d54b91;
+}
+
+/* SURPRISE */
+#surprise{
+    display:none;
+    margin-top:28px;
+    padding:28px;
+    border-radius:28px;
+    background:linear-gradient(
+        135deg,
+        #ffe0ef,
+        #e9ddff
+    );
+    animation:show .7s ease;
+}
+
+@keyframes show{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+#surprise h2{
+    color:#d64d92;
+    margin-bottom:15px;
+}
+
+#surprise p{
+    line-height:1.85;
+}
+
+/* MEMORY CARD */
+.memory-card{
+    max-width:500px;
+    margin:25px auto;
+    padding:28px 20px;
+    border-radius:30px;
+    background:#ffffffaa;
+    border:2px solid #ffffffcc;
+    box-shadow:0 10px 30px #a65c9020;
+}
+
+.memory-icon{
+    font-size:65px;
+    animation:float 2.5s infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.memory-card h3{
+    margin:12px 0;
+    color:#d34b91;
+    font-size:25px;
+}
+
+.memory-card p{
+    font-size:16px;
+}
+
+/* FINAL */
+.final{
+    margin-top:22px;
+    padding:22px;
+    border-radius:25px;
+    background:#ffffff8c;
+}
+
+.final-text{
+    font-size:22px;
+    font-weight:700;
+    color:#d54c93;
+}
+
+/* FLOATING HEARTS */
+.heart{
+    position:fixed;
+    bottom:-60px;
+    z-index:20;
+    pointer-events:none;
+    animation:heartUp linear forwards;
+}
+
+@keyframes heartUp{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    15%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-115vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* BALLOONS */
+.balloon{
+    position:fixed;
+    bottom:-100px;
+    z-index:1;
+    font-size:55px;
+    pointer-events:none;
+    animation:balloonUp linear forwards;
+}
+
+@keyframes balloonUp{
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .card{
+        padding:32px 17px;
+        border-radius:28px;
+    }
+
+    .subtitle{
+        font-size:17px;
+    }
+
+    .message{
+        padding:21px;
+        font-size:15px;
+    }
+
+    .cake{
+        font-size:70px;
+    }
+
+    .intro-heart{
+        font-size:70px;
+    }
+
+    .memory-card{
+        padding:23px 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING SCREEN -->
+<section id="intro">
+
+    <div class="intro-box">
+
+        <div class="intro-heart">💗</div>
+
+        <h1>A Little Surprise...</h1>
+
+        <p>
+            Someone very special has a birthday today. 🎀
+            <br>
+            This little surprise is just for her.
+        </p>
+
+        <button class="open-btn" onclick="openBirthday()">
+            Open Your Surprise 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN PAGE -->
+<main class="main">
+
+    <div class="card">
+
+        <div class="tag">
+            🎀 ESPECIALLY FOR MY POOKIE 🎀
+        </div>
+
+        <div class="title">
+            Happy Birthday
+        </div>
+
+        <div class="name">
+            Durga 💗
+        </div>
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <div class="subtitle">
+
+            Today is your day.
+            So forget everything else for a moment
+            and just enjoy being the birthday girl. 👑✨
+
+        </div>
+
+
+        <div class="message">
+
+            💕 <b>Dear Durga,</b>
+
+            <br><br>
+
+            Happy Birthday to one of the cutest,
+            sweetest and most amazing people ever! 🥹💗
+
+            <br><br>
+
+            I hope today gives you a million reasons
+            to smile, laugh and make beautiful memories.
+
+            <br><br>
+
+            May every new day bring you happiness,
+            success, peace and lots of beautiful moments. 🌸
+
+            <br><br>
+
+            Always keep that cute smile,
+            keep shining and never change the wonderful
+            person you are.
+
+            <br><br>
+
+            You deserve all the happiness in the world,
+            Pookie. 🎀
+
+            <br><br>
+
+            <b>Happy Birthday, Durga! 🎂💗✨</b>
+
+        </div>
+
+
+        <button class="surprise-btn" onclick="showSurprise()">
+            🎁 Open One More Surprise
+        </button>
+
+
+        <!-- SURPRISE -->
+        <div id="surprise">
+
+            <h2>
+                💌 A Special Message
+            </h2>
+
+            <p>
+
+                Sometimes you don't need a huge gift.
+                A small reminder that someone cares
+                can be enough. 💗
+
+                <br><br>
+
+                So here is your reminder:
+
+                <br><br>
+
+                <b>
+                    You are special. You are amazing.
+                    And you deserve the happiest birthday ever. 🌷
+                </b>
+
+            </p>
+
+
+            <!-- CUTE MEMORY CARD -->
+            <div class="memory-card">
+
+                <div class="memory-icon">
+                    🎀
+                </div>
+
+                <h3>
+                    Pookie Memory Box 💗
+                </h3>
+
+                <p>
+
+                    No photo needed here...
+
+                    <br><br>
+
+                    Because some memories are better
+                    kept in the heart. ✨
+
+                    <br><br>
+
+                    Every laugh, every stupid conversation,
+                    every random moment...
+
+                    <br><br>
+
+                    <b>
+                        They're all little memories
+                        worth keeping. 💕
+                    </b>
+
+                </p>
+
+            </div>
+
+
+            <div class="final">
+
+                <div class="final-text">
+                    🎀 Happy Birthday My Pookie Durga 🎀
+                </div>
+
+                <br>
+
+                <p>
+                    May your smile stay this beautiful forever. 💗
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div style="margin-top:25px;font-size:14px;opacity:.7;">
+            Made specially for Durga with 💗
+        </div>
+
+    </div>
+
+</main>
+
+
+<script>
+
+/* OPEN BIRTHDAY */
+function openBirthday(){
+
+    const intro = document.getElementById("intro");
+
+    intro.style.opacity = "0";
+
+    setTimeout(function(){
+
+        intro.style.display = "none";
+
+    },1000);
+
+    confettiBlast();
+}
+
+
+/* SHOW SURPRISE */
+function showSurprise(){
+
+    const surprise =
+        document.getElementById("surprise");
+
+    surprise.style.display = "block";
+
+    confettiBlast();
+
+    for(let i=0;i<40;i++){
+
+        setTimeout(function(){
+            createHeart();
+        },i*50);
+
+    }
+
+    setTimeout(function(){
+
+        surprise.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    },250);
+}
+
+
+/* FLOATING HEARTS */
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="heart";
+
+    const items=[
+        "💗",
+        "💕",
+        "💖",
+        "💞",
+        "💓",
+        "🌸",
+        "✨",
+        "🎀"
+    ];
+
+    heart.innerHTML =
+        items[
+            Math.floor(Math.random()*items.length)
+        ];
+
+    heart.style.left =
+        Math.random()*100+"vw";
+
+    heart.style.fontSize =
+        (18+Math.random()*25)+"px";
+
+    heart.style.animationDuration =
+        (5+Math.random()*5)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },11000);
+}
+
+setInterval(createHeart,650);
+
+
+/* BALLOONS */
+function createBalloon(){
+
+    const balloon =
+        document.createElement("div");
+
+    balloon.className="balloon";
+
+    const items=[
+        "🎈",
+        "🎈",
+        "🎈",
+        "🎀",
+        "💗"
+    ];
+
+    balloon.innerHTML =
+        items[
+            Math.floor(Math.random()*items.length)
+        ];
+
+    balloon.style.left =
+        Math.random()*100+"vw";
+
+    balloon.style.animationDuration =
+        (7+Math.random()*5)+"s";
+
+    document.body.appendChild(balloon);
+
+    setTimeout(function(){
+        balloon.remove();
+    },13000);
+}
+
+setInterval(createBalloon,1800);
+
+
+/* CONFETTI */
+function confettiBlast(){
+
+    const symbols=[
+        "🎉",
+        "✨",
+        "💗",
+        "🎀",
+        "💕",
+        "⭐",
+        "🌸"
+    ];
+
+    for(let i=0;i<90;i++){
+
+        const confetti =
+            document.createElement("div");
+
+        confetti.innerHTML =
+            symbols[
+                Math.floor(Math.random()*symbols.length)
+            ];
+
+        confetti.style.position="fixed";
+        confetti.style.left="50%";
+        confetti.style.top="45%";
+        confetti.style.zIndex="200";
+        confetti.style.pointerEvents="none";
+        confetti.style.fontSize =
+            (12+Math.random()*20)+"px";
+
+        const x =
+            (Math.random()-0.5)*1000;
+
+        const y =
+            (Math.random()-0.5)*800;
+
+        confetti.animate(
+            [
+                {
+                    transform:
+                    "translate(-50%,-50%) scale(.5)",
+                    opacity:1
+                },
+                {
+                    transform:
+                    `translate(
+                        calc(-50% + ${x}px),
+                        calc(-50% + ${y}px)
+                    )
+                    rotate(${Math.random()*720}deg)
+                    scale(1)`,
+                    opacity:0
+                }
+            ],
+            {
+                duration:
+                    1200+Math.random()*1200,
+                easing:
+                    "cubic-bezier(.2,.8,.3,1)"
+            }
+        );
+
+        document.body.appendChild(confetti);
+
+        setTimeout(function(){
+            confetti.remove();
+        },2500);
+    }
+}
+
+</script>
+
+</body>
+</html>
